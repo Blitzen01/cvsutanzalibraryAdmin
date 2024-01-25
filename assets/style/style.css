@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-width: 270px;
+}
+:root {
+    --bg-color: rgb(12, 133, 28);
+    --bg-color-light: rgba(0, 255, 34, 0.548);
+    --bg-color-dark: rgb(4, 190, 13);
+    --bg-color-secondary: rgb(0, 0, 0);
+    --text-color: rgb(255, 255, 255);
+    --text-color-secondary: rgb(139, 139, 139);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--bg-color) !important;
+    box-shadow: 0 0 .1rem .2rem var(--bg-color-light) !important;
+}
+
+.w-lg-40 {
+    width: 40% !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+
+#opacBG {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+#opacBG::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, .5); /* Green color with 50% opacity */
+    z-index: 1 !important; /* Adjust the z-index as needed */
+}
+
+/* admin body  */
+#admin-body {
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+#pageHeader {
+    text-transform: uppercase;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: .5rem;
+}
+#header_logo {
+    width: 200px;
+}
+/* admin body  */
+
+
+/* cvsu page design */
+section {
+    width: 100%;
+    min-height: 70vh;
+}
+/* cvsu page design */
+
+
+/* admin login */
+#adminLogin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.text-center img {
+    width: 20vw;
+}
+
+#adminLogin h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .2rem;
+}
+
+#adminLogin form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+#adminLogin form #text-field {
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+}
+
+#adminLogin button {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .5rem;
+}
+
+#adminLogin #text-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+/* admin login */
+
+
+/* admin sidebar */
+#sidebar {
+    position: fixed;
+    left: -290px;
+    width: 280px;
+    height: 85vh;
+    border: 3px solid var(--bg-color);
+    border-radius: .5rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 100;
+    transition: .5s ease;
+}
+#sidebar.active {
+    left: 0px;
+}
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+#sidebar::-webkit-scrollbar-track {
+    background: none;
+}
+#sidebar::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+#sidebar ul a {
+    color: var(--bg-color-secondary);
+}
+
+#sidebar ul button {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--text-color-secondary) !important;
+}
+#adminLogoutBtn {
+    background: var(--bg-color);
+    color: var(--text-color) !important;
+}
+/* admin sidebar */
+
+
+/* admin header | Sidebar toggle */
+#toggle {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#toggle::before {
+    content : '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: var(--bg-color);
+    transform: translateY(-5px);
+    transition: .2s;
+}
+#toggle::after {
+    content : '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: var(--bg-color);
+    transform: translateY(5px);
+    transition: .2s;
+}
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+/* admin header | Sidebar toggle */
+
+
+.nav_bar {
+    transition: .5s ease;
+}
+.nav_bar:hover {
+    font-weight: bold;
+    transform: translateX(20px);
+    color: var(--bg-color-dark) !important;
+}
+
+
+/* admin transaction | remarks change of colors */
+.text-danger {
+    color: red;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-warning {
+    color: orange;
+}
+/* admin transaction | remarks change of colors */
+
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+
+
+
+
+/* for responsive screen on cellphone */
+@media screen and (max-width: 600px) {
+    /* admin login */
+    #adminLogin {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+    }
+    #adminLogin p {
+        font-size: .7rem;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid silver;
+    }
+
+    #adminLogin form {
+        padding: 0 40px;
+    }
+
+    #adminLogin form #text-field {
+        margin: 15px 0;
+    }
+
+    #adminLogin button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50px;
+        font-size: 8px;
+        height: 25px;
+        width: 50%;
+        margin-bottom: 2.5px;
+        letter-spacing: .2rem;
+    }
+    /* admin login */
+
+
+    /* user create announcement */
+    .w-lg-40 {
+        width: 90% !important;
+    }
+
+    .post-text {
+        font-size: 1rem !important;
+    }
+    .post-text-icon {
+        font-size: .7rem !important;
+    }
+    /* user create announcement */
+}
