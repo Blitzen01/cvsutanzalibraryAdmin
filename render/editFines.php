@@ -47,16 +47,15 @@
     </head>
 
     <body>
-        <div class="container mt-5 card p-2">
+        <div class="container mt-5 card p-2 w-50">
             <div class="text-end">
                 <a class="nav-link p-2" href="../libraryPages/opacSearch.php"><i class="fa-solid fa-x"></i></a>
             </div>
-            <h1 class="text-center">Update Fines</h1>
-
+            <h1 class="text-center">UPDATE FINES</h1>
             <form method="post" action="">
                 <div class="form-group">
-                    <label for="links"><?php echo $mainText . ' ' . $subText ?></label>
-                    <textarea class="form-control mb-2" name="links" id="links" rows="5" cols="50"><?php echo $links; ?></textarea>
+                    <label class="ps-3" for="links"><?php echo strtoupper($mainText . ' ' . $subText); ?></label>
+                    <input class="form-control mb-2" name="links" id="links" value="<?php echo $links; ?>">
                 </div>
 
                 <input type="hidden" name="mainText" value="<?php echo $mainText; ?>">
