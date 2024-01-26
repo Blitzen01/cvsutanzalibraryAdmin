@@ -1,4 +1,5 @@
 <h1 id="pageHeader">Analytics</h1>
+mag pupush ako ng kahit ano sa analytics
 <div class="container-fluid text-center mb-3">
     <h2 class="border p-2">MONTH OF <span id="currentMonth"></span></h2>
     <div class="row text-center">
