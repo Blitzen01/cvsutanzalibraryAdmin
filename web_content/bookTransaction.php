@@ -1,6 +1,6 @@
 <h1 id="pageHeader">Book Transaction</h1>
-<div class="p-5">
-<a href="../render/export.php"> <button class="btn btn-success m-3" type="button" name="button">Export To Excel</button> </a>
+<div class="data_table p-5">
+<!-- <a href="../render/export.php"> <button class="btn btn-success m-3" type="button" name="button">Export To Excel</button> </a> -->
     <?php
         // Fetch data from the bookBorrowed table
         $sqlBorrowed = "SELECT * FROM booktransaction";
@@ -9,8 +9,8 @@
         if ($resultBorrowed->num_rows > 0) {
             // Output a table header
             ?>
-            <table id="bookTransactionTable" class="table table-sm nowrap table-striped compact table-hover" style="width:100%">
-                <thead>
+            <table id="bookTransactionTable" class="table table-sm nowrap table-striped table-hover" style="width:100%">
+                <thead class="table-success">
                     <tr>
                         <th>Remarks</th>
                         <th>Library ID</th>

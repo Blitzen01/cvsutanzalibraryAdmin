@@ -9,7 +9,7 @@
             // Output a table header
             ?>
             <table id="bookBorrowedTable" class="table table-sm nowrap table-striped compact table-hover" style="width:100%">
-                <thead>
+                <thead class="table-success">
                     <tr>
                         <th>Action</th>
                         <th>Library Id</th>
