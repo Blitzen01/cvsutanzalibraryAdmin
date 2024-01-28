@@ -12,8 +12,6 @@
         <title>Circulation</title>
 
         <link rel="stylesheet" href="../assets/style/style.css">
-        <link rel="stylesheet" href="../assets/style/dataTable.css">
-        <link rel="stylesheet" href="datatables.min.css">
         
         <style>
             
@@ -59,9 +57,6 @@
 
 
         <script src="../assets/script/script.js"></script>
-        <script src="../assets/script/datatables.min.js"></script>
-        <script src="pdfmake.min.js"></script>
-        <script src="vfs_fonts.js"></script>
 
         <script>
 
@@ -85,8 +80,6 @@
                         'copy', 'csv', 'excel', 'pdf', 'print'
                     ]
                 });
-
-                dataTableBorrowed.buttons().container().appendTo('#example_wrapper .col-md-6:(0)');
 
                 // Handle the click event on the "Accept" button
                 $('.accept_request').click(function () {

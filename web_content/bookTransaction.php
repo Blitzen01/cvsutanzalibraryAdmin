@@ -1,5 +1,5 @@
 <h1 id="pageHeader">Book Transaction</h1>
-<div class="data_table p-5">
+<div class="p-5">
 <!-- <a href="../render/export.php"> <button class="btn btn-success m-3" type="button" name="button">Export To Excel</button> </a> -->
     <?php
         // Fetch data from the bookBorrowed table
@@ -9,7 +9,7 @@
         if ($resultBorrowed->num_rows > 0) {
             // Output a table header
             ?>
-            <table id="bookTransactionTable" class="table table-sm nowrap table-striped table-hover" style="width:100%">
+            <table id="bookTransactionTable" class="table table-sm nowrap table-striped compact table-hover" style="width:100%">
                 <thead class="table-success">
                     <tr>
                         <th>Remarks</th>
@@ -32,12 +32,6 @@
                         $remarksClass = '';
                     
                         switch ($rowBorrowed["remarks"]) {
-                            case 'Damaged':
-                                $remarksClass = 'text-danger';
-                                break;
-                            case 'Declined':
-                                $remarksClass = 'text-danger';
-                                break;
                             case 'Returned':
                                 $remarksClass = 'text-success';
                                 break;
@@ -45,7 +39,7 @@
                                 $remarksClass = 'text-warning';
                                 break;
                             default:
-                                $remarksClass = '';
+                                $remarksClass = 'text-danger';
                                 break;
                         }
                     

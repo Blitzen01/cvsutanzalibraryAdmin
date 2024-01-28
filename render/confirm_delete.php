@@ -1,7 +1,7 @@
 <?php
-    include '../../render/connection.php';
-    include '../../assets/cdn/cdn_links.php';
-    include '../../assets/fonts/fonts.php';
+    include '../render/connection.php';
+    include '../assets/cdn/cdn_links.php';
+    include '../assets/fonts/fonts.php';
     
 ?>
     
@@ -66,7 +66,7 @@
                 <div class="container text-center mt-5 w-lg-40">
                     <div class="col card mx-auto">
                         <div class="text-end p-2">
-                            <a href="../../libraryPages/home.php"><button class="btn"><i class="fa-solid fa-xmark"></i></button></a>
+                            <a href="../libraryPages/home.php"><button class="btn"><i class="fa-solid fa-xmark"></i></button></a>
                         </div>
 
                         <h1>Confirm Delete</h1>
@@ -81,14 +81,14 @@
                                     $images = explode(',', $row['image_url']);
                                     if (!empty($images)) {
                                         foreach ($images as $image) { ?>
-                                            <img src="../../render/uploads/images/<?php echo $image; ?>" alt="" srcset="" class="mb-2">
+                                            <img src="../render/uploads/images/<?php echo $image; ?>" alt="" srcset="" class="mb-2">
                                         <?php }
                                     }
                                 } ?>
 
                                 <?php if (isset($row['video_url']) && !empty($row['video_url'])) { ?>
                                     <video width="100%" height="auto" controls class="mb-2">
-                                        <source src="../../render/uploads/videos/<?php echo $row['video_url']; ?>" type="video/mp4">
+                                        <source src="../render/uploads/videos/<?php echo $row['video_url']; ?>" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 <?php } ?>
@@ -100,7 +100,7 @@
                                 <?php } ?>
                             </div>
                             </div>
-                        <form class="m-2 text-end" action="../../render/delete_post.php" method="post">
+                        <form class="m-2 text-end" action="../render/delete_post.php" method="post">
                             <input type="hidden" name="postId" value="<?php echo $postId; ?>">
                             <input class="btn btn-danger" type="submit" value="Delete">
                         </form>
